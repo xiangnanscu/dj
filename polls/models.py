@@ -7,5 +7,6 @@ class Author(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
+    stars = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='articles')
 
